@@ -7,6 +7,8 @@ import Grid from '@mui/material/Grid';
 import CheckIcon from '@mui/icons-material/Check';
 
 import IconButton from '@mui/material/IconButton';
+import EditIcon from '@mui/icons-material/Edit';
+
 
 
 
@@ -17,7 +19,7 @@ export default function Todo() {
 
   return (
     <>
-            <Card sx={{ minWidth: 275, backgroundColor: "#283593", color: "#FFF", marginTop: 5 }}>
+            <Card className="todoCard"  sx={{ minWidth: 275, backgroundColor: "#283593", color: "#FFF", marginTop: 5 }}>
         <CardContent>
                  <Grid container spacing={2}>
         <Grid size={8}  >          <Typography
@@ -31,27 +33,33 @@ export default function Todo() {
             sx={{ color: "text.secondary" }}
           >
             Day Plan
+          </Typography>  
+
+          <Typography variant="h7"  >
+            Plan Informations
           </Typography>
+
 
           </Grid>
 
           {/* ACTION BUTON TA3 EL CARDS*/}
         <Grid size={4}  display="flex" justifyContent="space-around" alignItems="center"  >
 
-        <IconButton aria-label="delete" disabled color="primary" style={{color:'#8bc34a' , background:'white' , border:'solid 3px #8bc34a ' , cursor:"pointer"}}>
+        <IconButton  className="btn-icon" aria-label="delete"  style={{color:'#8bc34a' , background:'white' , border:'solid 3px #8bc34a ' , cursor:"pointer"}}>
         
         <CheckIcon  />
 
       </IconButton>
       
-          <IconButton aria-label="delete" disabled color="primary" style={{color:'#8bc34a' , background:'white' , border:'solid 3px #8bc34a ' , cursor:"pointer"}}>
+          <IconButton className="btn-icon"  aria-label="delete"  style={{color:'#1769aa' , background:'white' , border:'solid 3px #1769aa ' , cursor:"pointer"}}>
         
-        <CheckIcon  />
+        <EditIcon  />
 
       </IconButton>
-          <IconButton aria-label="delete" disabled color="primary" style={{color:'#8bc34a' , background:'white' , border:'solid 3px #8bc34a ' , cursor:"pointer"}}>
+
+          <IconButton className="btn-icon"  aria-label="delete"  style={{color:'red' , background:'white' , border:'solid 3px red ' , cursor:"pointer"}}>
         
-        <CheckIcon  />
+        <DeleteIcon  />
       </IconButton>
     
  
