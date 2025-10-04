@@ -7,6 +7,10 @@ import Divider from '@mui/material/Divider';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Todo from "../Components/Todo"
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+        import Button from '@mui/material/Button';
+
 
 export default function TodoList() {
 
@@ -56,9 +60,38 @@ export default function TodoList() {
     {/* The ened of Tuggle Buttons */ }
       {/* All Todos */}
       <Todo/>
+      {/* input and button */ }
+      <Grid container style={{marginTop:'20px'}}  spacing={2}>
+        
+      <Grid xs={8} 
+        display='flex'
+        justifyContent='space-around'
+        alignContent="center" 
+        style={{
+      }} >
+              <TextField  style={{
+                width:'100%'
+              }} id="outlined-basic" label="Name of the Plan" variant="outlined" />
+
+      </Grid>
+
+      <Grid xs={4} 
+        display='flex'
+        justifyContent='space-around'
+        alignContent="center" 
+        style={{
+          background:"red",
+      }} >
+      <Button  variant="contained">Add Plan</Button>
+      </Grid>
+      </Grid>
+
+        
+       
+
 
       </CardContent>
-   
+  
     </Card>
       </Container>
 
