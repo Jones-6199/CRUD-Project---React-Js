@@ -21,7 +21,7 @@ export default function TodoList() {
       <Container maxWidth="sm">
      <Card sx={{ minWidth: 275 }}>
       <CardContent>
-        <Typography gutterBottom style={{alignContent:'center',justifyContent:'center',display:'flex'}} variant='h5' sx={{  }}>
+        <Typography gutterBottom style={{alignContent:'center',justifyContent:'center',display:'flex', fontWeight:'bold'}} variant='h3' sx={{  }}>
         Day Plan
         </Typography>
         <Divider />

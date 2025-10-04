@@ -1,3 +1,8 @@
+body {
+font-family:RobotoBold  !important ;
+}
+
+
 .App {
   text-align: center;
 }
@@ -58,3 +63,30 @@
 .todoCard:hover {
   transition: all 0.2s !important;
 }
+
+/*  Fonts Faces */
+
+
+@font-face{
+  font-family: RobotoBol ;
+  src: url("../public/Fonts/Roboto_SemiCondensed-Italic.ttf");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: Z;
+  src: url("../public/Fonts/Roboto-Bold.ttf");
+  font-weight: bold;
+}
+@font-face{
+  font-family: RobotoBo ;
+  src: url("../public/Fonts/Roboto_Condensed-ExtraLightItalic.ttf");
+  font-weight: 900;
+
+
+}@font-face{
+  font-family: RobotoBold ;
+  src: url("../public/Fonts/Roboto-Bold.ttf");
+  font-weight: 200;
+}
+
