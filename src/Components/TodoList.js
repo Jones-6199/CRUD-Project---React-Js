@@ -11,13 +11,15 @@ import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { v4 as uuidv4 } from 'uuid';
-
+import { useState } from "react";
 
 export default function TodoList() {
 
-
   
-  const todos = [
+
+
+
+  const initialTodos = [
     {
       id:uuidv4(),
       title: "Learning React" ,
@@ -37,6 +39,21 @@ export default function TodoList() {
       isCompleted:false
     },
   ];
+  const [todos, setTodos ] = useState(initialTodos)
+  const [titleInput, setTitleInput] = useState("")
+  function handleAddClick(){
+      const newTodo = {
+    id: uuidv4(),
+    title: titleInput,
+    description: "",
+    isCompleted:false,
+  }
+      setTodos([...todos, newTodo ])
+      setTitleInput("")
+
+  }
+
+
 
   const myTodos = todos.map((todo) => {
     return( 
@@ -94,11 +111,15 @@ export default function TodoList() {
             >
               <TextField
                 style={{
-                  width: "100%",
+                width:'250px',
                 }}
                 id="outlined-basic"
                 label="Name of the Plan"
                 variant="outlined"
+                value={titleInput}
+                onChange={(e) => {
+                  setTitleInput(e.target.value)
+                }}
               />
             </Grid>
 
@@ -111,7 +132,17 @@ export default function TodoList() {
                 background: "red",
               }}
             >
-              <Button variant="contained">Add Plan</Button>
+              <Button variant="contained" 
+              style={{
+                width:'250px',
+
+              }}
+              onClick={() => {
+                handleAddClick()
+              }}
+              >
+                
+                Add Plan</Button>
             </Grid>
           </Grid>
         </CardContent>
